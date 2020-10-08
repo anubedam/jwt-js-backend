@@ -1,0 +1,32 @@
+AUTENTICACIÓN CON JWT (JASON WEB TOKEN):
+----------------------------------------
+
+Cuando un usuario inicia sesión en cualquier página web con su nombre de usuario y
+contraseña, el servidor de autenticación generalmente crea y envía un JWT. 
+
+Este JWT se pasa junto con las llamadas de API al servidor en la cabecera
+Authorization, para que el servidor pueda comprobar que el usuario está autenticado.  
+
+El JWT sigue siendo válido a menos que caduque o el usuario cierre sesión en la aplicación
+(en nuestro caso almacenaremos el token en el almacenamiento local del navegador).
+
+Un JWT se compone de tres partes separadas por puntos: 
+    encabezamiento 
+    carga útil
+    firma
+
+-----------------------------------------
+      Construir el servidor Express.
+-----------------------------------------
+
+1. Crear un directorio para el proyecto, entrar en el, y teclear npm init (este comando
+   crea un fichero package.json). Creamos el archivo servidor.js.
+
+2.- Instalamos los módulos express, jsonwebtoken, cors y bodyparser:
+
+   npm install express jsonwebtoken cors body-parser --save
+
+3.- Ver la configuración dentro de servidor.js --> Esta sería la parte del Backend
+    (Ver la parte que consume estas api con angular).
+
+4.- Para ejecutar la app sería node servidor.js
